@@ -16,4 +16,4 @@ docker stop
 
 docker ps
 
-docker rmi-f yulavalon
+docker rmi-f avalondocker
