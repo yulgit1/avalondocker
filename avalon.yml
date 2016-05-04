@@ -1,0 +1,89 @@
+---
+development:
+  name: Avalon
+  fedora:
+    namespace: avalon
+  domain:
+    host: localhost
+    port: 3000
+    protocol: http
+  dropbox:
+    path: "/srv/avalon/dropbox/"
+    upload_uri: sftp://localhost/srv/avalon/dropbox
+  matterhorn:
+    root: http://localhost:8080/
+    baseApplication: avalon
+    cleanup_log: log/cleanup_jobs.log
+  mediainfo:
+    path: "/usr/bin/mediainfo"
+  email:
+    comments: avalon-comments@example.edu
+    notification: avalon-notifications@example.edu
+    support: avalon-support@example.edu
+    mailer:
+      smtp:
+        address: smtp.example.edu
+        port: 587
+        enable_starttls_auto: false
+  streaming:
+    stream_token_ttl: 20
+    rtmp_base: rtmp://localhost/avalon
+    http_base: http://localhost:3000/streams
+    default_quality: low
+  groups:
+    system_groups:
+    - administrator
+    - group_manager
+    - manager
+  master_file_management:
+    strategy: none
+  bib_retriever:
+    protocol: sru
+    url: http://zgate.example.edu:9000/exampledb
+    query: rec.id='%s'
+  ffmpeg:
+    path: "/usr/bin/ffmpeg"
+  controlled_vocabulary:
+    path: config/controlled_vocabulary.yml
+test:
+  fedora:
+    namespace: avalon
+  dropbox:
+    path: "/srv/avalon/dropbox/"
+    upload_uri: sftp://localhost/srv/avalon/dropbox
+  matterhorn:
+    root: http://localhost:8080/
+    baseApplication: avalon
+    cleanup_log: log/cleanup_jobs.log
+  mediainfo:
+    path: "/usr/bin/mediainfo"
+  email:
+    comments: avalon-comments@example.edu
+    notification: avalon-notifications@example.edu
+    support: avalon-support@example.edu
+    mailer:
+      smtp:
+        address: smtp.example.edu
+        port: 587
+        enable_starttls_auto: false
+  streaming:
+    stream_token_ttl: 20
+    content_path: "/path/to/avalon/content"
+    rtmp_base: rtmp://localhost/avalon
+    http_base: http://localhost:3000/streams
+  groups:
+    system_groups:
+    - administator
+    - group_manager
+    - manager
+    - administrator
+  master_file_management:
+    strategy: none
+  bib_retriever:
+    protocol: sru
+    url: http://zgate.example.edu:9000/exampledb
+    query: rec.id='%s'
+  ffmpeg:
+    path: "/usr/bin/ffmpeg"
+  controlled_vocabulary:
+    path: config/controlled_vocabulary.yml

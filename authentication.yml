@@ -1,0 +1,22 @@
+---
+#- :name: Avalon Test Auth
+#  :provider: :identity
+#  :params:
+#    :fields:
+#   - :email
+
+#- :name: Avalon Lti OAuth
+#  :provider: :lti
+#  :hidden: true
+#  :params:
+#    :oauth_credentials:
+#      key: 'secret'
+
+- :name: Avalon Yale CAS OAuth
+  :provider: :cas
+  :params:
+    host: secure.its.yale.edu
+    login_url: /cas/login
+    logout_url: /cas/logout
+    service_validate_url: /cas/serviceValidate
+    disable_ssl_verification: true 
