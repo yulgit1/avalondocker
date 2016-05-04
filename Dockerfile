@@ -43,6 +43,8 @@ RUN rake db:test:prepare
 RUN rake jetty:config
 RUN rake felix:config
 
+EXPOSE 3000
+
 CMD "rake" "avalon:services:start"
 CMD "rails" "server" 
 
